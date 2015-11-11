@@ -206,12 +206,10 @@ SvgPanZoom.prototype.handleMouseWheel = function(evt) {
     return;
   }
 
-  if (this.options.preventMouseEventsDefault){
-    if (evt.preventDefault) {
-      evt.preventDefault();
-    } else {
-      evt.returnValue = false;
-    }
+  if (evt.preventDefault) {
+    evt.preventDefault();
+  } else {
+    evt.returnValue = false;
   }
 
   // Default delta in case that deltaY is not available
@@ -439,12 +437,10 @@ SvgPanZoom.prototype.handleMouseDown = function(evt, prevEvt) {
  * @param  {Event} evt
  */
 SvgPanZoom.prototype.handleMouseMove = function(evt) {
-  if (this.options.preventMouseEventsDefault) {
-    if (evt.preventDefault) {
-      evt.preventDefault()
-    } else {
-      evt.returnValue = false
-    }
+  if (evt.preventDefault) {
+    evt.preventDefault()
+  } else {
+    evt.returnValue = false
   }
 
   if (this.state === 'pan' && this.options.panEnabled) {
